@@ -9878,7 +9878,7 @@ class NostalgiaForInfinityX(IStrategy):
                     item_buy_logic.append(dataframe['r_14'] < -99.0)
                     item_buy_logic.append(dataframe['r_480_1h'] < -93.0)
                     item_buy_logic.append(dataframe['rsi_14_1h'] + dataframe['rsi_14'] < 33.0)
-                    item_buy_logic.append(dataframe['cti_1h'] < 0.3)
+                    item_buy_logic.append(dataframe['cti_1h'] < -0.35)
 
                 # Condition #18 - Semi swing. Local dip. BTC not negative.
                 elif index == 18:
