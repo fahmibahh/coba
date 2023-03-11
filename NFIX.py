@@ -9650,42 +9650,6 @@ class NostalgiaForInfinityX(IStrategy):
             if self.buy_params[f"buy_condition_{index}_enable"]:
                 # Standard protections - Common to every condition
                 # -----------------------------------------------------------------------------------------
-                if global_buy_protection_params["ema_fast"]:
-                    item_buy_protection_list.append(dataframe[f"ema_{global_buy_protection_params['ema_fast_len']}"] > dataframe['ema_200'])
-                if global_buy_protection_params["ema_slow"]:
-                    item_buy_protection_list.append(dataframe[f"ema_{global_buy_protection_params['ema_slow_len']}_1h"] > dataframe['ema_200_1h'])
-                if global_buy_protection_params["close_above_ema_fast"]:
-                    item_buy_protection_list.append(dataframe['close'] > dataframe[f"ema_{global_buy_protection_params['close_above_ema_fast_len']}"])
-                if global_buy_protection_params["close_above_ema_slow"]:
-                    item_buy_protection_list.append(dataframe['close'] > dataframe[f"ema_{global_buy_protection_params['close_above_ema_slow_len']}_1h"])
-                if global_buy_protection_params["sma200_rising"]:
-                    item_buy_protection_list.append(dataframe['sma_200'] > dataframe['sma_200'].shift(int(global_buy_protection_params['sma200_rising_val'])))
-                if global_buy_protection_params["sma200_1h_rising"]:
-                    item_buy_protection_list.append(dataframe['sma_200_1h'] > dataframe['sma_200_1h'].shift(int(global_buy_protection_params['sma200_1h_rising_val'])))
-                if global_buy_protection_params["safe_dips_threshold_0"] is not None:
-                    item_buy_protection_list.append(dataframe['tpct_change_0'] < global_buy_protection_params["safe_dips_threshold_0"])
-                if global_buy_protection_params["safe_dips_threshold_2"] is not None:
-                    item_buy_protection_list.append(dataframe['tpct_change_2'] < global_buy_protection_params["safe_dips_threshold_2"])
-                if global_buy_protection_params["safe_dips_threshold_12"] is not None:
-                    item_buy_protection_list.append(dataframe['tpct_change_12'] < global_buy_protection_params["safe_dips_threshold_12"])
-                if global_buy_protection_params["safe_dips_threshold_144"] is not None:
-                    item_buy_protection_list.append(dataframe['tpct_change_144'] < global_buy_protection_params["safe_dips_threshold_144"])
-                if global_buy_protection_params["safe_pump_6h_threshold"] is not None:
-                    item_buy_protection_list.append(dataframe['hl_pct_change_6_1h'] < global_buy_protection_params["safe_pump_6h_threshold"])
-                if global_buy_protection_params["safe_pump_12h_threshold"] is not None:
-                    item_buy_protection_list.append(dataframe['hl_pct_change_12_1h'] < global_buy_protection_params["safe_pump_12h_threshold"])
-                if global_buy_protection_params["safe_pump_24h_threshold"] is not None:
-                    item_buy_protection_list.append(dataframe['hl_pct_change_24_1h'] < global_buy_protection_params["safe_pump_24h_threshold"])
-                if global_buy_protection_params["safe_pump_36h_threshold"] is not None:
-                    item_buy_protection_list.append(dataframe['hl_pct_change_36_1h'] < global_buy_protection_params["safe_pump_36h_threshold"])
-                if global_buy_protection_params["safe_pump_48h_threshold"] is not None:
-                    item_buy_protection_list.append(dataframe['hl_pct_change_48_1h'] < global_buy_protection_params["safe_pump_48h_threshold"])
-                if global_buy_protection_params['btc_1h_not_downtrend']:
-                    item_buy_protection_list.append(dataframe['btc_not_downtrend_1h'])
-                if global_buy_protection_params['close_over_pivot_type'] != 'none':
-                    item_buy_protection_list.append(dataframe['close'] > dataframe[f"{global_buy_protection_params['close_over_pivot_type']}_1d"] * global_buy_protection_params['close_over_pivot_offset'])
-                if global_buy_protection_params['close_under_pivot_type'] != 'none':
-                    item_buy_protection_list.append(dataframe['close'] < dataframe[f"{global_buy_protection_params['close_under_pivot_type']}_1d"] * global_buy_protection_params['close_under_pivot_offset'])
                 if not self.config['runmode'].value in ('live', 'dry_run'):
                     if self.has_bt_agefilter:
                         item_buy_protection_list.append(dataframe['bt_agefilter_ok'])
