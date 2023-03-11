@@ -10218,6 +10218,7 @@ class NostalgiaForInfinityX(IStrategy):
                     item_buy_logic.append(dataframe['close_15m'].le(dataframe['close_15m'].shift()))
                     item_buy_logic.append(dataframe['rsi_14_15m'] < 31.0)
                     item_buy_logic.append(dataframe['cti_15m'] < -0.85)
+                    item_buy_logic.append(dataframe['r_14'] < -95.0)
                     item_buy_logic.append(dataframe['rsi_14'] < 44.0)
 
                 # Condition #44 - 15m. Semi swing. Local deeper dip. 15m uptrend.
