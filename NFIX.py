@@ -9794,7 +9794,7 @@ class NostalgiaForInfinityX(IStrategy):
                     item_buy_logic.append((dataframe['ema_26'] - dataframe['ema_12']) > (dataframe['open'] * 0.0145))
                     item_buy_logic.append((dataframe['ema_26'].shift() - dataframe['ema_12'].shift()) > (dataframe['open'] / 100))
                     item_buy_logic.append(dataframe['close'] < (dataframe['bb20_2_low'] * 0.984))
-                    item_buy_logic.append(dataframe['cti'] < -0.85)
+                    item_buy_logic.append(dataframe['cti'] < -0.9)
 
                 # Condition #11 - Semi swing. Local dip.
                 elif index == 11:
