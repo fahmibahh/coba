@@ -10041,6 +10041,7 @@ class NostalgiaForInfinityX(IStrategy):
                     item_buy_logic.append((dataframe['ema_26'] - dataframe['ema_12']) > (dataframe['open'] * 0.018))
                     item_buy_logic.append((dataframe['ema_26'].shift() - dataframe['ema_12'].shift()) > (dataframe['open'] / 100))
                     item_buy_logic.append(dataframe['close'] < (dataframe['bb20_2_low'] * 0.98))
+                    item_buy_logic.append(dataframe['cti'] < -0.9)
 
                 # Condition #31 - Long mode. Local dip.
                 elif index == 31:
