@@ -9702,6 +9702,7 @@ class NostalgiaForInfinityX(IStrategy):
                     item_buy_logic.append(dataframe['close'].le(dataframe['close'].shift()))
                     item_buy_logic.append(dataframe['cti_1h'] < 0.83)
                     item_buy_logic.append(dataframe['r_480_1h'] < -2.0)
+                    item_buy_logic.append(dataframe['cti'] < -0.3)
                     item_buy_logic.append(dataframe['crsi_1h'] > 15.0)
                     item_buy_logic.append(dataframe['volume_mean_12'] > (dataframe['volume_mean_24'] * 0.85))
 
@@ -10057,7 +10058,7 @@ class NostalgiaForInfinityX(IStrategy):
                     item_buy_logic.append(dataframe['tail'].lt(dataframe['bb40_2_delta'] * 0.25))
                     item_buy_logic.append(dataframe['close'].lt(dataframe['bb40_2_low'].shift()))
                     item_buy_logic.append(dataframe['close'].le(dataframe['close'].shift()))
-                    item_buy_logic.append(dataframe['cti'] < -0.25)
+                    item_buy_logic.append(dataframe['cti'] < -0.3)
                     item_buy_logic.append(dataframe['crsi_1h'] > 14.0)
 
                 # Condition #32 - Long mode. Local dip.
@@ -10081,6 +10082,7 @@ class NostalgiaForInfinityX(IStrategy):
                     # Logic
                     item_buy_logic.append(dataframe['close'] < (dataframe['ema_16'] * 0.93))
                     item_buy_logic.append(dataframe['ewo'] > 2.5)
+                    item_buy_logic.append(dataframe['cti'] < -0.3)
                     item_buy_logic.append(dataframe['rsi_14'] < 46.0)
                     item_buy_logic.append(dataframe['r_14'] < -97.0)
                     item_buy_logic.append(dataframe['ewo_1h'] > 0.1)
@@ -10148,6 +10150,7 @@ class NostalgiaForInfinityX(IStrategy):
                     item_buy_logic.append((dataframe['ema_26'] - dataframe['ema_12']) > (dataframe['open'] * 0.0192))
                     item_buy_logic.append((dataframe['ema_26'].shift() - dataframe['ema_12'].shift()) > (dataframe['open'] / 100))
                     item_buy_logic.append(dataframe['r_480_1h'] < -1.0)
+                    item_buy_logic.append(dataframe['r_14'] < -90.0)
 
                 # Condition #39 - Semi swing. Uptrend. Local dip.
                 elif index == 39:
@@ -10163,6 +10166,7 @@ class NostalgiaForInfinityX(IStrategy):
                     item_buy_logic.append(dataframe['close'].lt(dataframe['bb40_2_low'].shift()))
                     item_buy_logic.append(dataframe['close'].le(dataframe['close'].shift()))
                     item_buy_logic.append(dataframe['r_480_1h'] < -5.0)
+                    item_buy_logic.append(dataframe['cti'] < -0.3)
                     item_buy_logic.append(dataframe['volume_mean_12'] > (dataframe['volume_mean_24'] * 1.0))
 
                 # Condition #40 - Semi swing. Uptrend. Local dip.
