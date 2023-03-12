@@ -9937,7 +9937,7 @@ class NostalgiaForInfinityX(IStrategy):
                     item_buy_logic.append(dataframe['ewo'] > 1.0)
                     item_buy_logic.append(dataframe['cti'] < -0.9)
                     item_buy_logic.append(dataframe['r_14'] < -97.0)
-                    item_buy_logic.append(dataframe['cti_1h'] < 0.85)
+                    item_buy_logic.append(dataframe['cti_1h'] < 0.8)
                     item_buy_logic.append(dataframe['crsi'] > 12.0)
 
                 # Condition #22 - Swing. Uptrend. Bounce from daily support level
