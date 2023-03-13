@@ -7916,7 +7916,7 @@ class NostalgiaForInfinityX(IStrategy):
                     item_buy_logic.append(dataframe['mfi'] < self.buy_mfi_2.value)
                     item_buy_logic.append(dataframe['cti'] < self.buy_cti_2.value)
                     item_buy_logic.append(dataframe['r_14'] < self.buy_r14_2.value)
-                    item_buy_logic.append(dataframe['r_480'] > self.buy_r480_2,value)
+                    item_buy_logic.append(dataframe['r_480'] > self.buy_r480_2.value)
                     item_buy_logic.append(dataframe['cti_1h'] < self.buy_cti_1h.value)
                     item_buy_logic.append(dataframe['volume'] < (dataframe['volume_mean_4'] * self.buy_volume.value))
 
