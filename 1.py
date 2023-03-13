@@ -123,7 +123,7 @@ class NostalgiaForInfinityX(IStrategy):
         "0": 100.0,
     }
 
-    stoploss = -0.99
+    stoploss = -0.20
 
     # Trailing stoploss (not used)
     trailing_stop = False
@@ -7962,7 +7962,7 @@ class NostalgiaForInfinityX(IStrategy):
         if self._should_hold_trade(trade, rate, sell_reason):
             return False
         if (sell_reason == 'stop_loss'):
-            return False
+            return True
         return True
 
     def _should_hold_trade(self, trade: "Trade", rate: float, sell_reason: str) -> bool:
