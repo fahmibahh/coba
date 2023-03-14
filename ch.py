@@ -7,7 +7,7 @@ import talib.abstract as ta
 import pandas_ta as pta
 from freqtrade.persistence import Trade
 from freqtrade.strategy.interface import IStrategy
-from pandas import DataFrame
+from pandas import DataFrame, Series
 from freqtrade.strategy import DecimalParameter, IntParameter, merge_informative_pair
 from functools import reduce
 
@@ -109,6 +109,7 @@ class air(IStrategy):
         # ewo indicators
         dataframe['ema_8'] = ta.EMA(dataframe, timeperiod=8)
         dataframe['ema_16'] = ta.EMA(dataframe, timeperiod=16)
+        dataframe['EWO'] = ewo(dataframe, 50, 200)
 
         #local indicators
         dataframe['ema_12'] = ta.EMA(dataframe, timeperiod=12)
