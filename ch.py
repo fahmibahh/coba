@@ -109,8 +109,7 @@ class air(IStrategy):
         # ewo indicators
         dataframe['ema_8'] = ta.EMA(dataframe, timeperiod=8)
         dataframe['ema_16'] = ta.EMA(dataframe, timeperiod=16)
-        dataframe['EWO'] = ewo(dataframe, 50, 200)
-
+        
         #local indicators
         dataframe['ema_12'] = ta.EMA(dataframe, timeperiod=12)
         dataframe['ema_26'] = ta.EMA(dataframe, timeperiod=26)
