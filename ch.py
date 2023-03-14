@@ -109,11 +109,10 @@ class air(IStrategy):
         # ewo indicators
         dataframe['ema_8'] = ta.EMA(dataframe, timeperiod=8)
         dataframe['ema_16'] = ta.EMA(dataframe, timeperiod=16)
-        
+
         #local indicators
         dataframe['ema_12'] = ta.EMA(dataframe, timeperiod=12)
         dataframe['ema_26'] = ta.EMA(dataframe, timeperiod=26)
-        dataframe['closedelta'] = (dataframe['close'] - dataframe['close'].shift()).abs()
 
         #cofi indicators
         dataframe['adx'] = ta.ADX(dataframe)
@@ -151,7 +150,7 @@ class air(IStrategy):
             ((
                 (dataframe['lower'].shift().gt(0)) &
                 (dataframe['bbdelta'].gt(dataframe['ha_close'] * self.clucha_bbdelta_close.value)) &
-                (dataframe['ha_closedelta'].gt(dataframe['ha_close'] * self.clucha_closedelta_close.value)) &
+                (dataframe['closedelta'].gt(dataframe['ha_close'] * self.clucha_closedelta_close.value)) &
                 (dataframe['tail'].lt(dataframe['bbdelta'] * self.clucha_bbdelta_tail.value)) &
                 (dataframe['ha_close'].lt(dataframe['lower'].shift())) &
                 (dataframe['ha_close'].le(dataframe['ha_close'].shift()))
