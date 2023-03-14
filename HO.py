@@ -122,7 +122,7 @@ class NostalgiaForInfinityX(IStrategy):
         "0": 100.0,
     }
 
-    stoploss = -0.99
+    stoploss = -0.20
 
     # Trailing stoploss (not used)
     trailing_stop = False
@@ -202,70 +202,70 @@ class NostalgiaForInfinityX(IStrategy):
         #############
         # Enable/Disable conditions
         "buy_condition_1_enable": True,
-        "buy_condition_2_enable": True,
-        "buy_condition_3_enable": True,
-        "buy_condition_4_enable": True,
-        "buy_condition_5_enable": True,
-        "buy_condition_6_enable": True,
-        "buy_condition_7_enable": True,
-        "buy_condition_8_enable": True,
-        "buy_condition_9_enable": True,
-        "buy_condition_10_enable": True,
-        "buy_condition_11_enable": True,
-        "buy_condition_12_enable": True,
-        "buy_condition_13_enable": True,
-        "buy_condition_14_enable": True,
-        "buy_condition_15_enable": True,
-        "buy_condition_16_enable": True,
-        "buy_condition_17_enable": True,
-        "buy_condition_18_enable": True,
-        "buy_condition_19_enable": True,
-        "buy_condition_20_enable": True,
-        "buy_condition_21_enable": True,
-        "buy_condition_22_enable": True,
-        "buy_condition_23_enable": True,
-        "buy_condition_24_enable": True,
-        "buy_condition_25_enable": True,
-        "buy_condition_26_enable": True,
-        "buy_condition_27_enable": True,
-        "buy_condition_28_enable": True,
-        "buy_condition_29_enable": True,
-        "buy_condition_30_enable": True,
-        "buy_condition_31_enable": True,
-        "buy_condition_32_enable": True,
-        "buy_condition_33_enable": True,
-        "buy_condition_34_enable": True,
-        "buy_condition_35_enable": True,
-        "buy_condition_36_enable": True,
-        "buy_condition_37_enable": True,
-        "buy_condition_38_enable": True,
-        "buy_condition_39_enable": True,
-        "buy_condition_40_enable": True,
-        "buy_condition_41_enable": True,
-        "buy_condition_42_enable": True,
-        "buy_condition_43_enable": True,
-        "buy_condition_44_enable": True,
-        "buy_condition_45_enable": True,
-        "buy_condition_46_enable": True,
-        "buy_condition_47_enable": True,
-        "buy_condition_48_enable": True,
-        "buy_condition_49_enable": True,
-        "buy_condition_50_enable": True,
-        "buy_condition_51_enable": True,
-        "buy_condition_52_enable": True,
-        "buy_condition_53_enable": True,
-        "buy_condition_54_enable": True,
-        "buy_condition_55_enable": True,
-        "buy_condition_56_enable": True,
-        "buy_condition_57_enable": True,
-        "buy_condition_58_enable": True,
-        "buy_condition_59_enable": True,
-        "buy_condition_60_enable": True,
-        "buy_condition_61_enable": True,
-        "buy_condition_62_enable": True,
-        "buy_condition_63_enable": True,
-        "buy_condition_64_enable": True,
-        "buy_condition_65_enable": True,
+        "buy_condition_2_enable": False,
+        "buy_condition_3_enable": False,
+        "buy_condition_4_enable": False,
+        "buy_condition_5_enable": False,
+        "buy_condition_6_enable": False,
+        "buy_condition_7_enable": False,
+        "buy_condition_8_enable": False,
+        "buy_condition_9_enable": False,
+        "buy_condition_10_enable": False,
+        "buy_condition_11_enable": False,
+        "buy_condition_12_enable": False,
+        "buy_condition_13_enable": False,
+        "buy_condition_14_enable": False,
+        "buy_condition_15_enable": False,
+        "buy_condition_16_enable": False,
+        "buy_condition_17_enable": False,
+        "buy_condition_18_enable": False,
+        "buy_condition_19_enable": False,
+        "buy_condition_20_enable": False,
+        "buy_condition_21_enable": False,
+        "buy_condition_22_enable": False,
+        "buy_condition_23_enable": False,
+        "buy_condition_24_enable": False,
+        "buy_condition_25_enable": False,
+        "buy_condition_26_enable": False,
+        "buy_condition_27_enable": False,
+        "buy_condition_28_enable": False,
+        "buy_condition_29_enable": False,
+        "buy_condition_30_enable": False,
+        "buy_condition_31_enable": False,
+        "buy_condition_32_enable": False,
+        "buy_condition_33_enable": False,
+        "buy_condition_34_enable": False,
+        "buy_condition_35_enable": False,
+        "buy_condition_36_enable": False,
+        "buy_condition_37_enable": False,
+        "buy_condition_38_enable": False,
+        "buy_condition_39_enable": False,
+        "buy_condition_40_enable": False,
+        "buy_condition_41_enable": False,
+        "buy_condition_42_enable": False,
+        "buy_condition_43_enable": False,
+        "buy_condition_44_enable": False,
+        "buy_condition_45_enable": False,
+        "buy_condition_46_enable": False,
+        "buy_condition_47_enable": False,
+        "buy_condition_48_enable": False,
+        "buy_condition_49_enable": False,
+        "buy_condition_50_enable": False,
+        "buy_condition_51_enable": False,
+        "buy_condition_52_enable": False,
+        "buy_condition_53_enable": False,
+        "buy_condition_54_enable": False,
+        "buy_condition_55_enable": False,
+        "buy_condition_56_enable": False,
+        "buy_condition_57_enable": False,
+        "buy_condition_58_enable": False,
+        "buy_condition_59_enable": False,
+        "buy_condition_60_enable": False,
+        "buy_condition_61_enable": False,
+        "buy_condition_62_enable": False,
+        "buy_condition_63_enable": False,
+        "buy_condition_64_enable": False,
+        "buy_condition_65_enable": False,
         #############
     }
 
@@ -9490,6 +9490,8 @@ class NostalgiaForInfinityX(IStrategy):
         dataframe['tpct_change_2']   = self.top_percent_change(dataframe,2)
         dataframe['tpct_change_12']  = self.top_percent_change(dataframe,12)
         dataframe['tpct_change_144'] = self.top_percent_change(dataframe,144)
+        # 3 hours, protect against wicks
+        dataframe['hl_pct_change_36'] = self.range_percent_change(dataframe, 'HL', 36)
 
         if not self.config['runmode'].value in ('live', 'dry_run'):
             # Backtest age filter
@@ -9667,13 +9669,13 @@ class NostalgiaForInfinityX(IStrategy):
                     # Non-Standard protections
 
                     # Logic
-                    item_buy_logic.append(((dataframe['close'] - dataframe['open'].rolling(12).min()) / dataframe['open'].rolling(12).min()) > 0.027)
-                    item_buy_logic.append(dataframe['rsi_14'] < 35.0)
-                    item_buy_logic.append(dataframe['r_32'] < -80.0)
-                    item_buy_logic.append(dataframe['mfi'] < 31.0)
-                    item_buy_logic.append(dataframe['rsi_14_1h'] > 30.0)
-                    item_buy_logic.append(dataframe['rsi_14_1h'] < 84.0)
-                    item_buy_logic.append(dataframe['r_480_1h'] > -99.0)
+                    item_buy_logic.append(((dataframe['close'] - dataframe['open'].rolling(12).min()) / dataframe['open'].rolling(12).min()) > 0.029)
+                    item_buy_logic.append(dataframe['rsi_14'] < 40.0)
+                    item_buy_logic.append(dataframe['r_32'] < -70.3)
+                    item_buy_logic.append(dataframe['mfi'] < 28.3)
+                    item_buy_logic.append(dataframe['rsi_14_1h'] > 40.0)
+                    item_buy_logic.append(dataframe['rsi_14_1h'] < 75.0)
+                    item_buy_logic.append(dataframe['r_480_1h'] > -92.5)
 
                 # Condition #2 - Semi swing. Local dip.
                 elif index == 2:
@@ -9691,7 +9693,7 @@ class NostalgiaForInfinityX(IStrategy):
                 # Condition #3 - Semi swing. Local dip.
                 elif index == 3:
                     # Non-Standard protections
-                    item_buy_logic.append(dataframe['close'] > (dataframe['sup_level_1h'] * 0.964))
+                    item_buy_logic.append(dataframe['hl_pct_change_36'] < 0.5)
 
                     # Logic
                     item_buy_logic.append(dataframe['bb40_2_low'].shift().gt(0))
@@ -9702,14 +9704,13 @@ class NostalgiaForInfinityX(IStrategy):
                     item_buy_logic.append(dataframe['close'].le(dataframe['close'].shift()))
                     item_buy_logic.append(dataframe['cti_1h'] < 0.83)
                     item_buy_logic.append(dataframe['r_480_1h'] < -2.0)
-                    item_buy_logic.append(dataframe['cti'] < -0.9)
                     item_buy_logic.append(dataframe['crsi_1h'] > 15.0)
                     item_buy_logic.append(dataframe['volume_mean_12'] > (dataframe['volume_mean_24'] * 0.85))
 
                 # Condition #4 - Semi swing. Local dip.
                 elif index == 4:
                     # Non-Standard protections
-                    item_buy_logic.append(dataframe['close'] > (dataframe['sup_level_1h'] * 0.94))
+                    item_buy_logic.append(dataframe['hl_pct_change_36'] < 1.0)
 
                     # Logic
                     item_buy_logic.append(dataframe['ema_26'] > dataframe['ema_12'])
@@ -10610,7 +10611,7 @@ class NostalgiaForInfinityX(IStrategy):
         if self._should_hold_trade(trade, rate, sell_reason):
             return False
         if (sell_reason == 'stop_loss'):
-            return False
+            return True
         return True
 
     def _should_hold_trade(self, trade: "Trade", rate: float, sell_reason: str) -> bool:
