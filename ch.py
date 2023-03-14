@@ -1,4 +1,5 @@
 import logging
+import numpy as np
 from datetime import datetime, timedelta
 from typing import Optional, Union
 import freqtrade.vendor.qtpylib.indicators as qtpylib
@@ -7,7 +8,7 @@ import pandas_ta as pta
 from freqtrade.persistence import Trade
 from freqtrade.strategy.interface import IStrategy
 from pandas import DataFrame
-from freqtrade.strategy import DecimalParameter, IntParameter
+from freqtrade.strategy import DecimalParameter, IntParameter, merge_informative_pair
 from functools import reduce
 
 log = logging.getLogger(__name__)
