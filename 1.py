@@ -309,13 +309,13 @@ class NostalgiaForInfinityX(IStrategy):
         }
     }
 
-    buy_min_inc_1 = DecimalParameter(0.01, 0.05, default=0.027, space='buy', decimals=3, optimize=True, load=True)
-    buy_rsi_1h_min_1 = IntParameter(25, 40, default=20, space='buy', optimize=True, load=True)
-    buy_rsi_1h_max_1 = IntParameter(70, 90, default=84, space='buy', optimize=True, load=True)
-    buy_rsi_1 = IntParameter(20, 40, default=36, space='buy', optimize=True, load=True)
-    buy_mfi_1 = DecimalParameter(20.0, 40.0, default=50.0, space='buy', decimals=1, optimize=True, load=True)
-    buy_r32_1 = DecimalParameter(-100, -70, default=-80.0, space='buy', decimals=1, optimize=True, load=True)
-    buy_r480_1h = DecimalParameter(-100, -70, default=-99.0, space='buy', decimals=1, optimize=True, load=True)
+    buy_min_inc_1 = DecimalParameter(0.01, 0.05, default=0.029, space='buy', decimals=3, optimize=True, load=True)
+    buy_rsi_1h_min_1 = IntParameter(25, 40, default=40, space='buy', optimize=True, load=True)
+    buy_rsi_1h_max_1 = IntParameter(70, 90, default=75, space='buy', optimize=True, load=True)
+    buy_rsi_1 = IntParameter(20, 40, default=40, space='buy', optimize=True, load=True)
+    buy_mfi_1 = DecimalParameter(20.0, 40.0, default=28.3, space='buy', decimals=1, optimize=True, load=True)
+    buy_r32_1 = DecimalParameter(-100, -70, default=-70.3, space='buy', decimals=1, optimize=True, load=True)
+    buy_r480_1h = DecimalParameter(-100, -70, default=-92.5, space='buy', decimals=1, optimize=True, load=True)
 
     # Sell
     sell_condition_1_enable = True
